@@ -1,8 +1,8 @@
 FROM node:latest
 
-RUN mkdir -p /usr/backend
+RUN mkdir -p /backend
 
-WORKDIR /usr/backend
+WORKDIR /backend
 
 COPY package.json . 
 
@@ -11,6 +11,8 @@ COPY . .
 RUN npm install
 
 VOLUME /backend/logfile
+
+VOLUME /backend/public/upload
 
 EXPOSE 4500
 
