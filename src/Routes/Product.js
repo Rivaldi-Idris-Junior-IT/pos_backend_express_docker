@@ -9,9 +9,9 @@ const Routes = express.Router()
 // Import untuk produk
 Routes.get("/", controller.all)
 Routes.get("/search/:nama", controller.search)
-Routes.post("/", upload.single("link_gambar") ,chache, controller.add)
-Routes.put("/", validate, upload.single("link_gambar") ,chache, controller.Update)
-Routes.delete("/delete/:id", chache, controller.delete)
+Routes.post("/", upload.single("link_gambar") , controller.add)
+Routes.put("/", validate, upload.single("link_gambar") , controller.Update)
+Routes.delete("/delete/:id",  controller.delete)
 Routes.get("/useJoin",controller.joinall)
 
 
